@@ -347,7 +347,9 @@ with right_col:
     col1, col2 = st.columns([1, 2])  # ratio: 1 part image, 2 parts text
 
     with col1:
-        st.image("images/cb.png", width=150)
+        BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+        img_path = os.path.join(BASE_DIR, "images", "cb.png")
+        st.image(img_path, width=150)
 
     with col2:
         st.write("""
