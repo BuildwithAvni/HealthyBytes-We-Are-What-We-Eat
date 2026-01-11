@@ -39,11 +39,14 @@ st.set_page_config(
 )
 
 import streamlit as st
+import os
 import base64
 
 # Function to convert image to base64
 def image_to_base64(image_path):
-    with open(image_path, "rb") as f:
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    img_path = os.path.join(BASE_DIR, image_path)
+    with open(img_path, "rb") as f:
         data = f.read()
     return base64.b64encode(data).decode("utf-8")
 
