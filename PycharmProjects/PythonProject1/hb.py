@@ -101,7 +101,7 @@ def set_bg(image_path):
     )
 
 
-set_bg("images/b1.jpeg")
+#set_bg("images/b1.jpeg")
 
 
 left_col, divider_col, right_col = st.columns([2.5, 0.05, 2])
